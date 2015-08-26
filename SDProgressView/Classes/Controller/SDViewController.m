@@ -73,13 +73,13 @@
 
 - (void)setupSubviews
 {
-    int perrowCount= 2;
+    NSInteger perrowCount= 2;
     CGFloat w = 100;
     CGFloat h = w;
     CGFloat margin = (self.view.frame.size.width - perrowCount * w) / (perrowCount + 1);
     [self.demoViews enumerateObjectsUsingBlock:^(SDDemoItemView *demoView, NSUInteger idx, BOOL *stop) {
-        int rowIndex = idx / perrowCount;
-        int columnIndex = idx % perrowCount;
+        NSInteger rowIndex = idx / perrowCount;
+        NSInteger columnIndex = idx % perrowCount;
         CGFloat x = margin + (w + margin) * columnIndex;
         CGFloat y = margin + (h + margin) * rowIndex;
         demoView.frame = CGRectMake(x, y, w, h);
